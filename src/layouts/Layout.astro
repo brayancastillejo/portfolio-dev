@@ -4,16 +4,17 @@ import Header from "../components/Header.astro";
 
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={Astro.props.description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -28,7 +29,14 @@ const { title } = Astro.props;
   :root {
     color-scheme: light dark;
     --logo-fill-color: #000;
+    --background-color: white;
+    --color: #0d0d0d;
     --orange-600: #ea580c;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   html {
     font-family: "Inter variable", system-ui, sans-serif;
@@ -40,10 +48,14 @@ const { title } = Astro.props;
     padding: 16px;
     min-height: 100vh;
     max-width: 1024px;
+    background-color: var(--background-color);
+    color: var(--color);
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --logo-fill-color: #fff;
+      --background-color: #0d0d0d;
+      --color: white;
     }
   }
 </style>

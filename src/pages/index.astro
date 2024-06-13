@@ -1,29 +1,56 @@
 ---
+import { Image } from "astro:assets";
+import picture from "../assets/picture.png";
+import SocialLink from "../components/SocialLink.astro";
 import ThisIsMe from "../components/ThisIsMe.astro";
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Brayan's Portfolio">
-  <main>
-    <h1 class="mt-14 md:mt-24 text-4xl md:text-[40px] font-bold">
-      Welcome to Brayan's Portfolio!
-    </h1>
-    <div class="flex flex-col md:flex-row gap-4 md:gap-32">
-      <h2 class="mt-8 max-w-[60ch]">
-        Hi, my name is Brayan Castillejo. I'm from Cali, Colombia, and I'm
-        currently building web projects. I'm focused on improving my skills,
-        gaining experience by creating fun things, collaborating, and learning,
-        all toward eventually working on products with a team.
-      </h2>
-      <div class="flex">
-        <img
-          class="size-32 rounded-full"
-          src="/public/picture.webp"
-          alt="Brayan's picture."
-        />
-        <ThisIsMe />
+<Layout
+  title="Brayan's Portfolio"
+  description="Frontend Web Developer studying at Platzi. Sponsored by the great generosity of midudev. Working with web technologies like Astro, React and Next.js"
+>
+  <main class="sm:w-xl sm:mx-auto lg:w-full lg:mx-0">
+    <section>
+      <h1
+        class="mt-14 md:mt-24 text-4xl md:text-[40px] font-bold leading-tight"
+      >
+        Welcome to Brayan's Portfolio!
+      </h1>
+      <div
+        class="flex flex-col md:flex-row gap-4 md:justify-between lg:justify-normal lg:gap-32"
+      >
+        <p class="mt-8 max-w-[60ch]">
+          Hi, my name is Brayan Castillejo. I'm from Cali, Colombia, and I'm
+          currently building web projects. I'm focused on improving my skills,
+          gaining experience by creating fun things, collaborating, and
+          learning, all toward eventually working on products with a team.
+        </p>
+        <div class="flex">
+          <Image
+            class="size-32 rounded-full"
+            src={picture}
+            loading="eager"
+            width={540}
+            height={540}
+            alt="Brayan's picture."
+          />
+          <ThisIsMe />
+        </div>
       </div>
-    </div>
+      <nav class="flex gap-4 mt-4">
+        <SocialLink href="https://www.linkedin.com">
+          <LinkedInIcon />
+          LinkedIn
+        </SocialLink>
+        <SocialLink href="https://github.com/brayancastillejo">
+          <GitHubIcon />
+          GitHub
+        </SocialLink>
+      </nav>
+    </section>
   </main>
 </Layout>
 
