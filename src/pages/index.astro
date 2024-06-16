@@ -6,6 +6,7 @@ import ThisIsMe from "../components/ThisIsMe.astro";
 import GitHubIcon from "../components/icons/GitHubIcon.astro";
 import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
 import Layout from "../layouts/Layout.astro";
+import Bento from "../components/Bento.astro";
 ---
 
 <Layout
@@ -13,7 +14,7 @@ import Layout from "../layouts/Layout.astro";
   description="Frontend Web Developer studying at Platzi. Sponsored by the great generosity of midudev. Working with web technologies like Astro, React and Next.js"
 >
   <main class="sm:w-xl sm:mx-auto lg:w-full lg:mx-0">
-    <section>
+    <section class="hero-section mb-24">
       <h1
         class="mt-14 md:mt-24 text-4xl md:text-[40px] font-bold leading-tight"
       >
@@ -50,6 +51,10 @@ import Layout from "../layouts/Layout.astro";
           GitHub
         </SocialLink>
       </nav>
+    </section>
+    <section class="proyects-section mb-24">
+      <h2 class="text-3xl font-semibold mb-6">Projects</h2>
+      <Bento />
     </section>
   </main>
 </Layout>
