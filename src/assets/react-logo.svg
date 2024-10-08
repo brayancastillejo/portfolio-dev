@@ -1,0 +1,27 @@
+<!-- <svg class="w-full h-full" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" fill="url(#paint0_linear_13_55)"/>
+<g clip-path="url(#clip0_13_55)">
+<path d="M16.8228 18.5397C18.2429 18.5397 19.3942 17.4026 19.3942 16C19.3942 14.5974 18.2429 13.4603 16.8228 13.4603C15.4026 13.4603 14.2513 14.5974 14.2513 16C14.2513 17.4026 15.4026 18.5397 16.8228 18.5397Z" fill="#387CA0"/>
+<path d="M16.8228 21.7143C23.9236 21.7143 29.6799 19.1559 29.6799 16C29.6799 12.8441 23.9236 10.2857 16.8228 10.2857C9.72198 10.2857 3.96564 12.8441 3.96564 16C3.96564 19.1559 9.72198 21.7143 16.8228 21.7143Z" stroke="#387CA0"/>
+<path d="M11.8122 18.8571C15.3626 24.9307 20.4841 28.5751 23.2514 26.9971C26.0186 25.4192 25.3838 19.2164 21.8334 13.1428C18.283 7.06928 13.1615 3.42488 10.3942 5.00283C7.62695 6.58079 8.2618 12.7836 11.8122 18.8571Z" stroke="#387CA0"/>
+<path d="M11.8122 13.1428C8.26178 19.2164 7.62692 25.4192 10.3942 26.9971C13.1614 28.5751 18.2829 24.9307 21.8333 18.8571C25.3837 12.7836 26.0186 6.5808 23.2513 5.00284C20.4841 3.42489 15.3626 7.06929 11.8122 13.1428Z" stroke="#387CA0"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_13_55" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAF2FF"/>
+<stop offset="1" stop-color="#108B9C"/>
+</linearGradient>
+<clipPath id="clip0_13_55">
+<rect width="27" height="24" fill="white" transform="translate(3.32275 4)"/>
+</clipPath>
+</defs>
+</svg> -->
+
+<svg class="w-full h-full" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="16" cy="16" r="3" fill="#108B9C"></circle>
+  <g stroke="#108B9C" stroke-width="1" fill="none">
+    <ellipse cx="16" cy="16" rx="15" ry="6"></ellipse>
+    <ellipse cx="21.5" cy="-5.5" rx="15" ry="6" transform="rotate(60)"></ellipse>
+    <ellipse cx="5.5" cy="-21.5" rx="15" ry="6" transform="rotate(120)"></ellipse>
+  </g>
+</svg>

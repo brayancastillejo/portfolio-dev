@@ -1,36 +1,33 @@
-<div class="flex flex-col gap-4 xs:flex-row aspect-square">
-  <!-- left column -->
-  <div class="flex flex-col xs:w-1/3 gap-4">
-    <div class="hidden xs:block xs:h-1/3 xs:bg-[#09f] xs:rounded-lg">
-      Box 1 😴
-    </div>
-    <div class="w-full h-48 bg-[#09f] rounded-lg xs:w-auto xs:h-2/3">
-      Project 1 🚧
-    </div>
+---
+import Image from "astro/components/Image.astro";
+import ReactLogo from "/src/assets/react-logo.svg";
+import TypeScriptLogo from "/src/assets/typescript-logo.svg";
+import TailwindLogo from "/src/assets/tailwind-logo.svg";
+import ElectrotechLogo from "/src/assets/electrotech-logo.png";
+import Electrotech from "/src/assets/electrotech.png";
+---
+
+<div class="grid w-full aspect-square grid-rows-4 grid-cols-3 xs:grid-rows-3 gap-4">
+  <div class="hidden xs:flex xs:justify-center xs:items-center row-span-1 col-span-1 bg-gradient-to-br from-neutral-200 to-neutral-400 dark:from-neutral-700 dark:to-neutral-800 rounded-lg">
+    <Image src={ReactLogo} alt={"React logo"} class="size-64" />
   </div>
-  <!-- right column -->
-  <div class="flex flex-col xs:w-2/3 gap-4 xs:gap-0">
-    <!-- right first row -->
-    <div class="w-full h-48 bg-[#09f] rounded-lg xs:w-auto xs:h-1/3 xs:mb-4">
-      Project 2 🚧
-    </div>
-    <!-- right second row -->
-    <div class="flex gap-4 xs:h-1/3 xs:pb-2">
-      <div class="hidden xs:block xs:bg-[#09f] xs:rounded-lg xs:w-1/2">
-        Box 2 😴
-      </div>
-      <div class="w-full h-48 bg-[#09f] rounded-lg xs:w-1/2 xs:h-full">
-        Project 3 🚧
-      </div>
-    </div>
-    <!-- right third row -->
-    <div class="flex gap-4 xs:h-1/3 xs:pt-2">
-      <div class="w-full h-48 bg-[#09f] rounded-lg xs:w-1/2 xs:h-full">
-        Project 4 🚧
-      </div>
-      <div class="hidden xs:block xs:bg-[#09f] xs:rounded-lg xs:w-1/2">
-        Box 3 😴
-      </div>
-    </div>
+  <div class="row-span-1 col-span-3 xs:col-span-2 bg-neutral-200 dark:bg-neutral-800 rounded-lg text-5xl flex justify-center items-center overflow-hidden">
+    <a href="https://electrotech-psi.vercel.app">
+      <Image src={ElectrotechLogo} alt={"Electrotech"} class="rounded-lg xs:hidden" />
+      <Image src={Electrotech} alt={"Electrotech"} class="rounded-lg hidden xs:block" />
+    </a>
+  </div>
+  <div class="row-span-1 col-span-3 xs:row-span-2 xs:col-span-1 bg-neutral-200 dark:bg-neutral-800 rounded-lg text-5xl flex justify-center items-center">🚧</div>
+  <div class="hidden xs:flex xs:justify-center xs:items-center row-span-1 col-span-1 bg-gradient-to-br from-neutral-200 to-neutral-400 dark:from-neutral-700 dark:to-neutral-800 rounded-lg">
+    <Image src={TypeScriptLogo} alt={"Astro logo"} class="size-64" />
+  </div>
+  <div class="row-span-1 col-span-3 xs:col-span-1 bg-neutral-200 dark:bg-neutral-800 rounded-lg text-5xl flex justify-center items-center">🚧</div>
+  <div class="row-span-1 col-span-3 xs:col-span-1 bg-neutral-200 dark:bg-neutral-800 rounded-lg text-5xl flex justify-center items-center">🚧</div>
+  <div class="hidden xs:flex xs:justify-center xs:items-center row-span-1 col-span-1 bg-gradient-to-br from-neutral-200 to-neutral-400 dark:from-neutral-700 dark:to-neutral-800 rounded-lg">
+    <Image src={TailwindLogo} alt={"Tailwind logo"} class="size-64" />
   </div>
 </div>
+
+<script>
+  const isX = window.matchMedia('(min-width: 480px)').matches;
+</script>

@@ -10,7 +10,13 @@ export default {
       xl: "1280px",
       "2xl": "1536px",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "react-logo": "url('/src/assets/react-logo.svg')",
+        "astro-logo": "url('/src/assets/astro-logo.png')",
+        "tailwind-logo": "url('/src/assets/tailwind-logo.svg')",
+      },
+    },
   },
   plugins: [],
 };
