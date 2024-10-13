@@ -42,7 +42,9 @@ import ThisIsMe from "../components/ThisIsMe.astro";
         </div>
       </div>
       <nav class="flex gap-4 mt-4">
-        <SocialLink href="https://www.linkedin.com/in/brayan-castillejo-005b30330/">
+        <SocialLink
+          href="https://www.linkedin.com/in/brayan-castillejo-005b30330/"
+        >
           <LinkedInIcon />
           LinkedIn
         </SocialLink>
@@ -113,4 +115,8 @@ import ThisIsMe from "../components/ThisIsMe.astro";
   </main>
 </Layout>
 
-<style></style>
+<script>
+  fetch("https://electrotech-backend.onrender.com")
+    .then((res) => console.log(res))
+    .catch((error) => console.error(error));
+</script>
